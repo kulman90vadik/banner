@@ -1,9 +1,17 @@
-// @font-face {
-//     font-family: 'SFProText';
-//     font-style: normal;
-//     font-weight: 300;
-//     font-display: swap;
-//     src:    url('../fonts/SFProText-Light.woff2') format('woff2'),
-//             url('../fonts/SFProText-Light.woff') format('woff');
-// }
+@font-face {
+    font-family: 'SFProText';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:    url('../fonts/SFProText-Regular.woff2') format('woff2'),
+            url('../fonts/SFProText-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'SFProText';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src:    url('../fonts/SFProText-Semibold.woff2') format('woff2'),
+            url('../fonts/SFProText-Semibold.woff') format('woff');
+}
 
