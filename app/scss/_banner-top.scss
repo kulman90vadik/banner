@@ -1,0 +1,256 @@
+// banner-top
+
+.banner-top {
+    position: relative;
+    padding: 81px 0 121px;
+    background: linear-gradient(225deg, #894AC9 0%, #4D46B1 100%);
+    color :#fff;
+    &__btn {
+        display: flex;
+        border: none;
+        background-color:rgba(255, 255, 255, 0.527344);
+        padding: 0;
+        cursor: pointer;
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        right: 13px;
+        top: 48px;
+        outline: transparent;
+        transition: background-color 0.3s ease-in;
+        &:hover {
+            background-color:rgba(182, 182, 182, 0.527);
+        }
+        &:focus {
+            background-color:rgba(88, 69, 69, 0.527);
+        }
+        &:active {
+            background-color:rgba(122, 122, 122, 0.527);
+        }
+        @include max($se) {
+            right: 9px;
+            top: 29px;
+        }
+    }
+    &__close {
+        margin: auto;
+        fill: #6B48BD;
+        width: 22px;
+        height: 22px;
+    }
+    &__title {
+        margin-bottom: 33px;
+        font-size: 34px;
+        line-height: 1.2;
+        text-align: center;
+        letter-spacing: -1px;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+        @include max($x) {
+            margin-bottom: 20px;
+        }
+        @include max($se) {
+            font-size: 25px;
+            letter-spacing: -2px;
+            margin-bottom: 6px;
+        }
+    }
+    &__inner {
+        position: relative;
+    }
+    &__list {
+        position: relative;
+        &::after {
+            position: absolute;
+            z-index: 10;
+            content: '';
+            width: 130px;
+            height: 290px;
+            background-image: url(../images/bitmap.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+            right: 95px;
+            top: -42px;
+            @include max($x) {
+                width: 102px;
+                height: 251px;
+                right: 96px;
+                top: -34px;
+            }
+            @include max($se) {
+                width: 63px;
+                height: 137px;
+                right: 90px;
+                top: -18px;
+            }
+        }
+    }
+    &__item {
+        font-size: 12px;
+        line-height: 1.16;
+        padding: 18px 0;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.0001) 0%, rgba(255, 255, 255, 0.690068) 48.69%, rgba(255, 255, 255, 0.0001) 100%);
+            opacity: 0.76;
+        }
+        &:last-child {
+            &::before {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.0001) 0%, rgba(255, 255, 255, 0.690068) 48.69%, rgba(255, 255, 255, 0.0001) 100%);
+                opacity: 0.76;
+            }
+        }
+        @include max($x) {
+            padding: 16px 0;
+        }
+        @include max($se) {
+            padding: 6px 0;
+        }
+    }
+    &__text {
+        padding-left: 33px;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+        @include max($x) {
+            padding-left: 20px;
+        }
+    }
+    &__line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 414px;
+        width: 100%;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: line 6s 2s linear forwards;
+    }
+    &__line--bottom {
+        height: 179px;
+        @include max($x) {
+            height: 192px;
+            top: -12px;
+        }
+        @include max($se) {
+            height: 141px;
+            top: -13px;
+            transform: rotate(-5deg);
+        }
+        
+    }
+    &__line--top {
+        height: 76px;
+        @include max($x) {
+            top: -2px;
+        }
+        @include max($se) {
+            height: 60px;
+            top: -7px;
+            transform: rotate(-3deg);
+        }
+    }
+    &__message {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        font-weight: 600;
+        box-shadow: 0px 2px 4px rgba(90, 0, 124, 0.258332);
+        right: 13px;
+        padding: 6px 7px 6px 9px;
+        border-radius: 11px;
+        font-size: 12px;
+        line-height: 1.2;
+        color: #000;
+        opacity: 0;
+        animation: opacit 1s 4.5s linear forwards;
+        z-index: 55;
+        &--free {
+            top: 29px;
+            &::before {
+                background-color: #EE304E;
+            }
+            @include max($x) {
+                top: 22px;
+            }
+            @include max($se) {
+                top: 0;
+            }
+        }
+        &--pro {
+            bottom: 42px;
+            text-transform: uppercase;
+            &::before {
+                background-color: #04CD00;
+            }
+            @include max($x) {
+                bottom: 44px;
+            }
+            @include max($se) {
+                bottom: 16px;
+            }
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 3px 5px 0 5px;
+            border-color: #ffffff transparent transparent transparent;
+            bottom: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            border: 3px solid #fff;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.139942);
+            border-radius: 50%;
+            width: 14px;
+            height: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -22px;
+        }
+        @include max($x) {
+            right: 30px;
+        }
+        @include max($se) {
+            padding: 4px 10px;
+            right: 19px;
+        }
+    }
+    &__icon {
+        width: 8px;
+        height: 12px;
+    }
+    &__icon--red {
+        fill: #EE304E;
+    }
+    &__icon--green {
+        fill: #04CD00;
+    }
+    @include max($x) {
+        padding-bottom: 97px;
+    }
+    @include max($se) {
+        padding-top: 52px;
+        padding-bottom: 73px;
+    }
+}

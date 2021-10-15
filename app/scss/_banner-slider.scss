@@ -1,0 +1,100 @@
+//banner-slider
+
+.banner-slider {
+    margin-top: -77px;
+    margin-bottom: 34px;
+    position: relative;
+    z-index: 3;
+    &__row {
+        max-width: 415px;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+    &__item {
+        cursor: pointer;
+        min-width: 374px;
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #F3F2F9;
+        @include max($x) {
+            min-width: 335px;
+        }
+        @include max($se) {
+            min-width: 280px;
+            padding: 15px;
+        }
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        @include max($se) {
+            margin-bottom: 6px;
+        }
+    }
+    &__review {
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+        font-weight: 600;
+        color: #1a1a1a;
+        font-size: 15px;
+        line-height: 1.2;
+    }
+    &__name {
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+        opacity: 0.5;
+        color: #1a1a1a;
+        font-size: 15px;
+        line-height: 1.2;
+    }
+    &__star {
+        display: flex;
+        margin-bottom: 16px;
+        @include max($se) {
+            margin-bottom: 10px;
+        }
+    }
+    &__icon {
+        width: 21px;
+        height: 21px;
+        fill: #FCBF59;
+        &:not(:last-child) {
+            margin-right: 4px;
+            @include max($se) {
+                margin-right: 3px;
+            }
+        }
+        @include max($se) {
+            width: 17px;
+            height: 17px;
+        }
+    }
+    &__text {
+        color: #1a1a1a;
+        font-size: 15px;
+        line-height: 1.2;
+        P {
+            @include lineClamp;
+            -webkit-line-clamp: 2;
+        }
+        @include max($se) {
+            font-size: 13px;
+        }
+    }
+    @include max($x) {
+        margin-top: -73px;
+        margin-bottom: 26px;
+    }
+    @include max($se) {
+        margin-top: -61px;
+        margin-bottom: 11px;
+    }
+}

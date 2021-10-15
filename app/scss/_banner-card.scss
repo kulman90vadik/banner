@@ -1,0 +1,106 @@
+// banner-card
+
+.banner-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    background-color: #F3F2F9;
+    backdrop-filter: blur(9.06094px);
+    outline: transparent;
+    cursor: pointer;
+    padding: 6px 11px 34px 11px;
+    transition: background-color 0.3s ease-in;
+    &--sale {
+        position: relative;
+        border-radius: 0 0 5px 5px;
+    }
+    &--active {
+        background-image: linear-gradient(225deg, #894AC9 0%, #4D46B1 100%);
+        color: #fff;
+    }
+    &:hover {
+        background-color: #cfcfcf;
+    }
+    &:focus {
+        background-color: #a7a7a7;
+    }
+    &__number {
+        font-size: 24px;
+        line-height: 1.16;
+        font-weight: 600;
+        @include max($se) {
+            font-size: 20px;
+        }
+    }
+    &__months {
+        font-size: 15px;
+        line-height: 1.16;
+        font-weight: 600;
+        margin-bottom: 13px;
+        @include max($x) {
+            margin-bottom: 8px;
+        }
+        @include max($se) {
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+    }
+    &__total-price {
+        font-size: 13px;
+        margin-bottom: 10px;
+        max-width: 60px;
+        width: 100%;
+        @include max($x) {
+            margin-bottom: 7px;
+            font-size: 12px;
+        }
+        @include max($se) {
+            margin-bottom: 2px;
+        }
+    }
+    &__price-months {
+        font-size: 10px;
+    }
+    &__sale-top {
+        position: absolute;
+        text-transform: uppercase;
+        width: 100%;
+        line-height: 1.1;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 5px 0;
+        background-color: #FCBF59;
+        top: -24px;
+        border-radius: 5px 5px 0 0;
+        color: #000;
+        letter-spacing: 1px;
+        @include max($se) {
+            letter-spacing: 0;
+            padding: 4px 0;
+            top: -22px;
+            font-size: 11px;
+        }
+    }
+    &__sale {
+        position: absolute;
+        font-size: 9px;
+        background: #FCA759;
+        width: 100%;
+        display: block;
+        bottom: 0;
+        font-weight: 600;
+        padding: 2px 0;
+        border-radius: 0 0 5px 5px;
+        color: #000;
+    }
+    @include max($x) {
+        padding: 4px 7px 22px;
+    }
+    @include max($se) {
+        padding: 2px 5px 22px;
+    }
+}

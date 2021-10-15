@@ -1,0 +1,51 @@
+// banner-bottom
+
+.banner-bottom {
+    padding: 0 20px;
+    &__list {     
+        padding-top: 24px;
+        margin-bottom: 29px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @include max($x) {
+            margin-bottom: 21px;
+        } @include max($se) {
+            margin-bottom: 15px;
+        }
+    }
+    &__item { 
+        max-width: 118px;
+        width: 100%;
+        @include max($x) {
+            max-width: 105px;
+        }
+        @include max($se) {
+            max-width: 88px;
+        }
+    }
+    &__link {
+        color: #fff;
+        padding: 11px;
+        font-size: 22px;
+        line-height: 1.24;
+        background-image: linear-gradient(225deg, #542285 0%, #222266 100%);
+        border-radius: 5px;
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+        outline: transparent;
+        transition: background-image 0.3s ease-in, color 0.3s ease-in;
+        &:hover {
+            background-image: linear-gradient(225deg, #644681 0%, #9f9fb4 100%);
+        }
+        &:active {
+            background-image: linear-gradient(225deg, #572e7e 0%, #313158 100%);
+            color: #ccc;
+        }
+        &:focus {
+            background-image: linear-gradient(225deg, #59585a 0%, #9a9aa3 100%);
+            color: #222266;
+        }
+    }
+}
