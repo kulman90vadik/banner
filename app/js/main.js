@@ -33,11 +33,5 @@ $('.banner-slider__row').slick({
     autoplaySpeed: 5000,
     rows: 0,
     arrows: false,
-    pauseOnHover: true,
-    pauseOnFocus: false
-});
-
-
-$('.banner-slider__items').on('touchstart', function(){
-    $('.banner-slider__row').slick('autoplay', false);
+    pauseOnHover: true
 });
