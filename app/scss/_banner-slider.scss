@@ -10,24 +10,25 @@
         width: 100%;
         overflow: hidden;
         display: flex;
-        justify-content: center;
+    }
+    &__items {
+        display: block;
+        max-width: 374px;
+        margin-right: 4px;
+        @include max($x) {
+            max-width: 335px;
+        }
+        @include max($se) {
+            max-width: 280px;
+        }
     }
     &__item {
         cursor: pointer;
-        min-width: 374px;
-        width: 100%;
         padding: 20px;
         border-radius: 10px;
         background-color: #F3F2F9;
-        @include max($x) {
-            min-width: 335px;
-        }
         @include max($se) {
-            min-width: 280px;
-            padding: 15px;
-        }
-        &:not(:last-child) {
-            margin-right: 5px;
+            padding: 15px 18px;
         }
     }
     &__heading {
@@ -94,7 +95,7 @@
         margin-bottom: 26px;
     }
     @include max($se) {
-        margin-top: -61px;
+        margin-top: -55px;
         margin-bottom: 11px;
     }
 }
