@@ -75,10 +75,11 @@
             right: 95px;
             top: -42px;
             @include max($x) {
-                width: 102px;
+                width: 120px;
                 height: 251px;
-                right: 96px;
+                right: 78px;
                 top: -34px;
+                background-position: left;
             }
             @include max($se) {
                 width: 63px;

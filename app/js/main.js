@@ -36,3 +36,8 @@ $('.banner-slider__row').slick({
     pauseOnHover: true,
     pauseOnFocus: false
 });
+
+
+$('.banner-slider__items').on('touchstart', function(){
+    $('.banner-slider__row').slick('autoplay', false);
+});
